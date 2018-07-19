@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+struct Recent {
+   
+   var user:User?
+   var title:String?
+   var likes:Int?
+   var location:String?
+   var imageUrl:String?
+}

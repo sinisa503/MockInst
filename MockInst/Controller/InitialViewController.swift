@@ -10,9 +10,14 @@ import UIKit
 
 class InitialViewController: UIViewController {
 
+   @IBOutlet weak var loginButton: UIButton!
+   
    var webViewVC: WebViewViewController?
    override func viewDidLoad() {
       super.viewDidLoad()
+      
+      loginButton.layer.cornerRadius = loginButton.bounds.height / 2
+      loginButton.layer.masksToBounds = true
    }
    
    @IBAction func loginAction(_ sender: UIButton) {

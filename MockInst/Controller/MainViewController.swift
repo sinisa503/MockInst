@@ -56,8 +56,9 @@ class MainViewController: UIViewController {
    }
 
    @IBAction func logOut(_ sender: UIButton) {
-      self.dismiss(animated: true, completion: { [weak self] in
-         self?.instagramService.setUserLoggedOut()
-      })
+      instagramService.setUserLoggedOut()
+      self.dismiss(animated: true, completion: nil)
+      let loginVC = UIStoryboard(name: Constants.MAIN_STORYBOARD_NAME, bundle: nil).instantiateViewController(withIdentifier: Constants.LOGIN_NAV_CONTROLLER_ID)
+      self.present(loginVC, animated: true, completion: nil)
    }
 }
